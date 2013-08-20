@@ -1,0 +1,8 @@
+project (kde-hello)
+find_package(KDE4 REQUIRED)
+include (KDE4Defaults)
+include_directories(${KDE4_INCLUDES})
+set(my_SRCS main.cpp)
+kde4_add_executable(kde-hello ${my_SRCS})
+target_link_libraries(kde-hello ${KDE4_KDEUI_LIBS})
+install(TARGETS kde-hello  ${INSTALL_TARGETS_DEFAULT_ARGS})
